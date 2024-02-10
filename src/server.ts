@@ -2,6 +2,7 @@ import express from "express";
 import cors from 'cors'
 
 const server = express()
+const port = process.env.PORT || 8182
 
 
 server.use(express.json())
@@ -16,6 +17,6 @@ server.get('/user', (req, res) => {
 })
 
 
-server.listen(8182, () => {
+server.listen(port, () => {
   console.log('http://localhost:8182')
 })
